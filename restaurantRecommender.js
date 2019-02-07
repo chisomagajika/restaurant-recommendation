@@ -13,6 +13,11 @@ class RestaurantRecommender() {
 
     }
 
+
+    addRating(){
+
+    }
+
     class addUser() {
     let User = function (){
         c
@@ -25,7 +30,7 @@ class RestaurantRecommender() {
     }
 
     addRating(){
-    // Adds a user rating for a restaurant
+    
     }
 
     addRestauranttoCategory(){
@@ -49,4 +54,3 @@ class RestaurantRecommender() {
 
     filter(){
     }
-}
