@@ -17,22 +17,24 @@
     </nav> -->
     <br /><br />
     <div id=lookingfor class = "cantainer" style = "width:900px margin:0 auto">
-        <h2 align= "center" > What are you in the mode for?</h2>
-        <br /><br />
-        <div align="center">
-            <input type="text" name="search" id="category" placeholder="search Category List" class= "form-control" />
+        <div id='inner'>
+            <h2 align= "center" > What are you in the mode for?</h2>
+            <br /><br />
+            <div align="center">
+                <input type="text" name="search" id="category" placeholder="search Category List" class= "form-control" />
+            </div>
+            <ul class= "list group" id="result"></ul>
         </div>
-        <ul class= "list group" id="result"></ul>
-        <br />
     </div>
-    <h1>
-        HIDE THIS LOL
-    </h1>
-    <div>
-        <button type='button'>
-            sign up
-        </button>
-    </div>
+    <form id= UserSignUp>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script> 
     <script type="text/javascript" src="restaurantRecommender.js"></script>

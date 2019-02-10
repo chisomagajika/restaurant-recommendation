@@ -1,7 +1,7 @@
 body{
     background-image:  url("https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    background-size: 1410px 820px;
-    
+    background-size: 100%;
+    height: 100%;
 }
 h2{
     color: aliceblue;
@@ -10,6 +10,31 @@ h2{
 
 }
 #category{
-    
+    width: 10cm;
 
+}
+#lookingfor{
+    border: 5px solid #fff; 
+    border: 5px solid rgba(255, 255, 255, .5);
+    height: 520px;
+    width: 520px;
+    /* margin: 50px; */
+    border-radius: 50%;
+    margin-left: 30%;
+    margin-bottom: 50%;
+}
+#inner{
+    background: #fff; /* Fall back, not used in fiddle */
+    background: rgba(255, 255, 255, .5);
+    height: 490px;
+    width: 490px;
+    border-radius: 50%; 
+    margin: auto; /* Horizontal Center */
+    /* margin-top: 10px;  */
+    margin:10px; 
+}
+#UserSignUp{
+    margin:0;
+    width: 10cm;
+    
 }
