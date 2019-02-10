@@ -34,7 +34,21 @@ class Filter{
     return restaurant.averageRating >= this.minimumStarRating && this.desiredCuisines.includes(restaurant.cuisine)
   }
 
+
 }
+  class catagory {
+    constructor(catagoryName){
+      this.catagoryName = catagoryName;
+    }
+    TheCategory(cuisine){
+      if(restaurant.cuisine === categoryName){
+        return restaurant.name 
+    }
+      else{
+      this.categories.push(cuisine);
+      }
+    }
+  }
   class Restaurant{
     constructor(name,cuisine,averageRating){
       this.name = name;
@@ -77,6 +91,9 @@ class Data{
       // Adds a user rating for a restaurant
       this.ratings.push(new Rating(user, restaurant, stars));
     }
+    addResturant(name, cuisine, averageRating){
+      this.restaurantNames.push(new Restaurant);
+    }
   
   }
 
@@ -89,7 +106,8 @@ new Rating('amy', 'subway', 4),
 new Rating('amy', 'burgger', 9),
 new Rating( 'steve','Chuckey Cheeses', 7 )
 );
-const chuckeys = new Restaurant('Chuckey Cheeses', 'pizza', 4);
+
+const chuckeys = new Restaurant('Chuckey Cheeses', 'Italian', 4);
 // the varible chuckey is the a new restaurant meaning that if we want to look it up we should remeber to link it up to what the rating.restaurantName, by what value they shar so we can link them later.
 console.log(data.ratings.filter((rating)=>{
   return rating.restaurantName === chuckeys.name;
@@ -111,13 +129,40 @@ const filter = new Filter(4, ['ethiopian']);
 
 // Compose a recommender from the above restaurants and filter variables.
 const recommender = new RestaurantRecommender("Zee", restaurants, filter);
+let american = new Category("American");
+let chinese = new Category("Chinese");
+let italian = new Category("Italian");
+let mexican = new Category("Mexican");
+let fastFood = new Category("Fast Food");
+//****************************************************************** */
+data.categories.add(american);
+data.categories.add(chinese);
+data.categories.add(italian);
+data.categories.add(mexican);
+data.categories.add(fastFood);
 
 // Log the results of the suggested Restaurants
 // console.log(recommender.suggestedRestaurants());
-// $(document).ready(function(){
-//     $("button").click(function(){
-//       $("h1").hide();
-//     });
-//   });
+
+//  function to make search through Restaurant Categories
+$(document).ready(function(){
+    $('#category').keyup(function(){
+      $("#result").html('');
+      var searchField =$('#category').val();
+      for(let i = 0; i < catagories.length; i++){
+        if(catagories[i] === searchField){
+          
+      for(let i = 0; i < restaurantNames.length; i++){
+          let showUser =[];
+            if(restaurantNames[i].cuisine === searchField){
+              showUser.push(restaurantNames[i].name)
+            }
+            return showUser;
+          }
+        }
+      } 
+      var epression = new catagory(searchField);
+    });
+  });
 
 module.exports = Data;
